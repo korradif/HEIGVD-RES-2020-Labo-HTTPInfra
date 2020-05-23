@@ -15,3 +15,6 @@ docker build -t res/apache_php .
 Then to run it : 
 docker run -d -p 9090:80 res/apache_php
 to access it : http://127.0.0.1:9090/
+
+# Apache config file location
+![ApacheConfigFile](https://raw.githubusercontent.com/korradif/HEIGVD-RES-2020-Labo-HTTPInfra/master/ApacheConfigFile.png)
