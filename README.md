@@ -5,7 +5,7 @@ This is the repo for the HTTP lab at HEIG-vd
 Frédéric Korradi and Simon Flückiger
 
 # Branches
-Work is done in branch dev
+Work is done in various "fb" branches, for each step
 
 # Base image
 php:7.4-apache
