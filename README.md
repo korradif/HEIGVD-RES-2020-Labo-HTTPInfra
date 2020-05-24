@@ -6,6 +6,8 @@ Frédéric Korradi and Simon Flückiger
 
 # Branches
 Work is done in various "fb" branches, for each step
+# General 
+find ip address : docker inspect express_dynamic | select-string ipaddress
 
 # Step 1 - Static HTTP server (apache)
 Base image: php:7.4-apache
@@ -27,3 +29,10 @@ Node.js version : 12.16
 
 # Step 3 - Reverse proxy
 The static configuration is fragile and needs to be improved because as the IP addresses of Docker containers are generated at container startup, the configuration of the reverse proxy could need a change each time we restart containers in order to work properly.
+ docker run -it -p 8080:80 php:7.4-apache /bin/bash
+
+## Modules nécessaires
+a2ensite 001
+a2enmod proxy
+a2enmod proxy_http
+service apache reload
