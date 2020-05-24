@@ -18,3 +18,8 @@ to access it : http://127.0.0.1:9090/
 
 # Apache config file location
 ![ApacheConfigFile](https://raw.githubusercontent.com/korradif/HEIGVD-RES-2020-Labo-HTTPInfra/master/ApacheConfigFile.png)
+
+# Step 2
+installed package chance
+docker build -t res/express-students .
+http://127.0.0.1:8000/generateNumbers to get random numbers using express.js
