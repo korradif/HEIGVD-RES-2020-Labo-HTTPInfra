@@ -23,3 +23,4 @@ to access it : http://127.0.0.1:9090/
 installed package chance
 docker build -t res/express-students .
 http://127.0.0.1:8000/generateNumbers to get random numbers using express.js
+Node.js version : 12.16
