@@ -3,11 +3,12 @@ This is the repo for the HTTP lab at HEIG-vd
 
 # Students
 Frédéric Korradi and Simon Flückiger
-
+# Dev environment
+We used Docker on Windows 10 with Docker Engine v19.03.8
 # Branches
-Work is done in various "fb" branches, for each step
+Work is done in various "fb" branches, one for each step
 # General 
-find ip address : docker inspect express_dynamic | select-string ipaddress
+Find ip address : docker inspect express_dynamic | select-string ipaddress
 
 # Step 1 - Static HTTP server (apache)
 Base image: php:7.4-apache
