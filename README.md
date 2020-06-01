@@ -13,9 +13,9 @@ find ip address : docker inspect express_dynamic | select-string ipaddress
 Base image: php:7.4-apache
 
 To build image : 
-docker build -t res/apache_php .
+<code>docker build -t res/apache_php .<code>
 Then to run it : 
-docker run -d -p 9090:80 res/apache_php
+<code>docker run -d -p 9090:80 res/apache_php<code>
 to access it : http://127.0.0.1:9090/
 
 # Apache config file location
@@ -23,19 +23,22 @@ to access it : http://127.0.0.1:9090/
 
 # Step 2 - Dynamic HTTP Server (express.js)
 installed package chance
-docker build -t res/express-students .
+<code>docker build -t res/express-students .<code>
 http://127.0.0.1:8000/generateNumbers to get random numbers using express.js
 Node.js version : 12.16
 
 # Step 3 - Reverse proxy
 The static configuration is fragile and needs to be improved because as the IP addresses of Docker containers are generated at container startup, the configuration of the reverse proxy could need a change each time we restart containers in order to work properly.
- docker run -it -p 8080:80 php:7.4-apache /bin/bash
+ <code>docker run -it -p 8080:80 php:7.4-apache /bin/bash<code>
 
 # Step 4 - Ajax
 Le call ajax pour récupérer un nombre aléatoire est fait à l'url $.getJSON("/api/numbers/generateNumbers",...);
 
 # Step 5 - Dynamic Configuration
 Regarding the lab videos, we need to take the latest version of the ![apache2-foreground](https://github.com/docker-library/php/blob/master/apache2-foreground)
+
+To run the RP with dynamic ip configuration using environment variables:
+ <code>docker run -d -e STATIC_APP=172.17.0.3:80 -e DYNAMIC_APP=172.17.0.2:3000 --name apache_rp -p 8080:80 res/apache_rp<code>
 
 ## Modules nécessaires
 a2ensite 001
