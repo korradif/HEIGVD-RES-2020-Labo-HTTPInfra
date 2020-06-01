@@ -31,6 +31,12 @@ Node.js version : 12.16
 The static configuration is fragile and needs to be improved because as the IP addresses of Docker containers are generated at container startup, the configuration of the reverse proxy could need a change each time we restart containers in order to work properly.
  docker run -it -p 8080:80 php:7.4-apache /bin/bash
 
+# Step 4 - Ajax
+Le call ajax pour récupérer un nombre aléatoire est fait à l'url $.getJSON("/api/numbers/generateNumbers",...);
+
+# Step 5 - Dynamic Configuration
+Regarding the lab videos, we need to take the latest version of the ![apache2-foreground](https://github.com/docker-library/php/blob/master/apache2-foreground)
+
 ## Modules nécessaires
 a2ensite 001
 a2enmod proxy
