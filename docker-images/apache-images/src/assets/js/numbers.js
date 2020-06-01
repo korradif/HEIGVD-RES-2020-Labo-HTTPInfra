@@ -11,5 +11,5 @@ $(function() {
         });
     };
     loadNumbers();
-    setInterval(loadNumbers, 2000);
+    setInterval(loadNumbers, 2000)
 });
