@@ -32,7 +32,7 @@ The static configuration is fragile and needs to be improved because as the IP a
  <code>docker run -it -p 8080:80 php:7.4-apache /bin/bash</code>
 
 # Step 4 - Ajax
-Le call ajax pour récupérer un nombre aléatoire est fait à l'url $.getJSON("/api/numbers/generateNumbers",...);
+The ajax call to retrieve a random number is done with the following url: $.getJSON("/api/numbers/generateNumbers",...);
 
 # Step 5 - Dynamic Configuration
 Regarding the lab videos, we need to take the latest version of the ![apache2-foreground](https://github.com/docker-library/php/blob/master/apache2-foreground)
